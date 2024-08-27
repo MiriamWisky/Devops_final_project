@@ -1,3 +1,5 @@
 #!/bin/bash
-docker stop lidor-nginx
-docker rm lidor-nginx
+
+# עוצרים ומסירים את הקונטיינר של האפליקציה
+docker stop flask-app || true
+docker rm flask-app || true
