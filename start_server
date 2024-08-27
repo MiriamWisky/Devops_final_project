@@ -1,12 +1,9 @@
 #!/bin/bash
 
-# עוצרים ומסירים קונטיינר קיים אם יש
 docker stop flask-app || true
 docker rm flask-app || true
 
-# מושכים את ה-Image העדכני מדוקר האב
 docker pull miriamwisky/flask-app:latest
 
-# מריצים את הקונטיינר החדש
 docker run -d -p 80:5000 --name flask-app miriamwisky/flask-app:latest
 
